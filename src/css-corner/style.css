@@ -1,0 +1,31 @@
+.niljs_g-no-box, .niljs_corner-triangle-top, .niljs_corner-triangle-right, .niljs_corner-triangle-bottom, .niljs_corner-triangle-left {
+  margin: 0;
+  padding: 0; }
+
+.niljs_g-no-size, .niljs_corner-triangle-top, .niljs_corner-triangle-right, .niljs_corner-triangle-bottom, .niljs_corner-triangle-left {
+  width: 0;
+  height: 0; }
+
+.niljs_corner-triangle-top {
+  border-bottom: 5px solid #fff;
+  border-left: 5px solid rgba(255, 0, 0, 0);
+  border-right: 5px solid rgba(255, 0, 0, 0);
+  border-top: 5px solid rgba(255, 0, 0, 0); }
+
+.niljs_corner-triangle-right {
+  border-left: 5px solid #fff;
+  border-right: 5px solid rgba(255, 0, 0, 0);
+  border-top: 5px solid rgba(255, 0, 0, 0);
+  border-bottom: 5px solid rgba(255, 0, 0, 0); }
+
+.niljs_corner-triangle-bottom {
+  border-top: 5px solid #fff;
+  border-left: 5px solid rgba(255, 0, 0, 0);
+  border-right: 5px solid rgba(255, 0, 0, 0);
+  border-bottom: 5px solid rgba(255, 0, 0, 0); }
+
+.niljs_corner-triangle-left {
+  border-right: 5px solid #fff;
+  border-left: 5px solid rgba(255, 0, 0, 0);
+  border-top: 5px solid rgba(255, 0, 0, 0);
+  border-bottom: 5px solid rgba(255, 0, 0, 0); }

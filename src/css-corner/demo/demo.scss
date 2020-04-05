@@ -1,0 +1,54 @@
+@import "../../common/custom/*.scss";
+@import "../vars.scss";
+
+$containerSize: 100px;
+$boxMargin: 15px;
+
+$top: -1 * $triangleWidth;
+$left: -1 * $triangleWidth;
+$bottom: -1 * $triangleWidth;
+$right: -1 * $triangleWidth;
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.demo {
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  margin: $boxMargin;
+  border: 1px solid #fff;
+  width: $containerSize;
+  height: $containerSize;
+  line-height: 20px;
+  position: relative;
+}
+
+.corner-triangle-field {
+  height: $containerSize * 2 + 2 * $boxMargin;
+  overflow: auto;
+}
+
+.corner-triangle-field .#{$triangleSelectorPrefix} {
+  position: absolute;
+}
+
+.corner-triangle-field .#{$triangleSelectorPrefix}-top {
+  top: $top;
+  left: $containerSize + $top;
+}
+
+.corner-triangle-field .#{$triangleSelectorPrefix}-right {
+  right: $right;
+  top: $containerSize + $top;
+}
+
+.corner-triangle-field .#{$triangleSelectorPrefix}-bottom {
+  bottom: $bottom;
+}
+
+.corner-triangle-field .#{$triangleSelectorPrefix}-left {
+  left: $left;
+}

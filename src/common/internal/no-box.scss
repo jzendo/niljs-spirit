@@ -1,0 +1,6 @@
+@import '../custom/vars.scss';
+
+.#{$globalPrefix}-no-box {
+  margin: 0;
+  padding: 0;
+}

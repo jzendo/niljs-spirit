@@ -1,0 +1,11 @@
+@import '../custom/vars.scss';
+
+.#{$globalPrefix}-pseudo-before {
+  content: " ";
+  width: 1px;
+  height: 1px;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+}

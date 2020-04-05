@@ -1,0 +1,24 @@
+@import "../custom/vars.scss";
+
+@import "./no-box.scss";
+@import "./no-size.scss";
+
+@mixin borderWith($width, $dir, $dirColor, $otherDirs, $maskColor) {
+  border-#{$dir}: $width solid $dirColor;
+
+  @each $name in $otherDirs {
+    border-#{$name}: $width solid $maskColor;
+  }
+}
+
+@mixin importNosize($selector) {
+  #{$selector} {
+    @extend .#{$globalPrefix}-no-size;
+  }
+}
+
+@mixin importNobox($selector) {
+  #{$selector} {
+    @extend .#{$globalPrefix}-no-box;
+  }
+}
