@@ -5,7 +5,7 @@ const stripVarToJson = require('./scripts/scss-vars-to-json')
 const { watch, series } = require('gulp');
 
 exports.watch = () => {
-  watch(['src/common/custom/vars.scss', 'src/**/vars.scss'], stripVarToJson.watch())
+  watch(['src/**/vars.scss'], stripVarToJson.watch())
   watch('src/**/*.scss', scss.watch())
 }
 

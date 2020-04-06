@@ -1,15 +1,15 @@
 // Global vars
 // Selector prefix
-$namespaceScope: niljs;
-$globalPrefix: #{$namespaceScope}_g;
+$namespaceScope: _n9; // Get a unique prefix-string
+$globalPrefix: #{$namespaceScope}0;
 
 // Module: src\css-corner
 // triangle
 $triangleWidth: 10px;
 $triangleColor: #fff;
-$triangleSelectorPrefix: #{$namespaceScope}_corner-triangle;
+$triangleSelectorPrefix: #{$namespaceScope}1;
 
 // rotate triangle
-$rotateTriangleWidth: 10px;
-$rotateTriangleSelectorPrefix: #{$namespaceScope}_corner-rotate-triangle;
+// $rotateTriangleWidth: 10px;
+$rotateTriangleSelectorPrefix: #{$namespaceScope}2;
 $rotateTriangleColor: #fff;

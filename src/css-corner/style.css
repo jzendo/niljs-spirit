@@ -1,97 +1,89 @@
-.niljs_g-no-box, .niljs_corner-triangle-top, .niljs_corner-triangle-right, .niljs_corner-triangle-bottom, .niljs_corner-triangle-left, .niljs_corner-rotate-triangle-top, .niljs_corner-rotate-triangle-right, .niljs_corner-rotate-triangle-bottom, .niljs_corner-rotate-triangle-left {
+._n90-no-box, ._n91-top, ._n91-right, ._n91-bottom, ._n91-left {
   margin: 0;
   padding: 0; }
 
-.niljs_g-no-size, .niljs_corner-triangle-top, .niljs_corner-triangle-right, .niljs_corner-triangle-bottom, .niljs_corner-triangle-left, .niljs_corner-rotate-triangle-top, .niljs_corner-rotate-triangle-right, .niljs_corner-rotate-triangle-bottom, .niljs_corner-rotate-triangle-left {
+._n90-no-size, ._n91-top, ._n91-right, ._n91-bottom, ._n91-left {
   width: 0px;
   height: 0px; }
 
-.niljs_g-no-box, .niljs_corner-triangle-top, .niljs_corner-triangle-right, .niljs_corner-triangle-bottom, .niljs_corner-triangle-left, .niljs_corner-rotate-triangle-top, .niljs_corner-rotate-triangle-right, .niljs_corner-rotate-triangle-bottom, .niljs_corner-rotate-triangle-left {
-  margin: 0;
-  padding: 0; }
-
-.niljs_g-no-size, .niljs_corner-triangle-top, .niljs_corner-triangle-right, .niljs_corner-triangle-bottom, .niljs_corner-triangle-left, .niljs_corner-rotate-triangle-top, .niljs_corner-rotate-triangle-right, .niljs_corner-rotate-triangle-bottom, .niljs_corner-rotate-triangle-left {
-  width: 0px;
-  height: 0px; }
-
-.niljs_corner-triangle-top {
+._n91-top {
   border-bottom: 5px solid #fff;
   border-left: 5px solid rgba(255, 0, 0, 0);
   border-right: 5px solid rgba(255, 0, 0, 0);
   border-top: 5px solid rgba(255, 0, 0, 0); }
 
-.niljs_corner-triangle-right {
+._n91-right {
   border-left: 5px solid #fff;
   border-right: 5px solid rgba(255, 0, 0, 0);
   border-top: 5px solid rgba(255, 0, 0, 0);
   border-bottom: 5px solid rgba(255, 0, 0, 0); }
 
-.niljs_corner-triangle-bottom {
+._n91-bottom {
   border-top: 5px solid #fff;
   border-left: 5px solid rgba(255, 0, 0, 0);
   border-right: 5px solid rgba(255, 0, 0, 0);
   border-bottom: 5px solid rgba(255, 0, 0, 0); }
 
-.niljs_corner-triangle-left {
+._n91-left {
   border-right: 5px solid #fff;
   border-left: 5px solid rgba(255, 0, 0, 0);
   border-top: 5px solid rgba(255, 0, 0, 0);
   border-bottom: 5px solid rgba(255, 0, 0, 0); }
 
-.niljs_corner-rotate-triangle-top {
-  width: 5px;
-  height: 5px; }
-  .niljs_corner-rotate-triangle-top::before {
+._n92-top {
+  width: 4px;
+  height: 4px; }
+  ._n92-top::before {
     background-color: #fff;
     transform-origin: center;
     transform: rotate(45deg);
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     content: '';
     display: block;
     overflow: hidden;
     visibility: visible;
     clear: both; }
 
-.niljs_corner-rotate-triangle-right {
-  width: 5px;
-  height: 5px; }
-  .niljs_corner-rotate-triangle-right::before {
+._n92-right {
+  width: 4px;
+  height: 4px; }
+  ._n92-right::before {
     background-color: #fff;
     transform-origin: center;
     transform: rotate(45deg);
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     content: '';
     display: block;
     overflow: hidden;
     visibility: visible;
     clear: both; }
 
-.niljs_corner-rotate-triangle-bottom {
-  width: 5px;
-  height: 5px; }
-  .niljs_corner-rotate-triangle-bottom::before {
+._n92-bottom {
+  width: 4px;
+  height: 4px; }
+  ._n92-bottom::before {
     background-color: #fff;
     transform-origin: center;
     transform: rotate(45deg);
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     content: '';
     display: block;
     overflow: hidden;
     visibility: visible;
     clear: both; }
 
-.niljs_corner-rotate-triangle-left {
-  width: 5px;
-  height: 5px; }
-  .niljs_corner-rotate-triangle-left::before {
+._n92-left {
+  width: 4px;
+  height: 4px; }
+  ._n92-left::before {
     background-color: #fff;
     transform-origin: center;
     transform: rotate(45deg);
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     content: '';
     display: block;
     overflow: hidden;

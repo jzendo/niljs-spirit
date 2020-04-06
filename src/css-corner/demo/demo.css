@@ -40,15 +40,15 @@ fieldset .block::after {
 
 .corner-triangle-field .demo-icon {
   position: absolute; }
-  .corner-triangle-field .demo-icon.niljs_corner-triangle-top {
+  .corner-triangle-field .demo-icon._n91-top {
     top: -10px;
     left: 90px; }
-  .corner-triangle-field .demo-icon.niljs_corner-triangle-right {
+  .corner-triangle-field .demo-icon._n91-right {
     right: -10px;
     top: 90px; }
-  .corner-triangle-field .demo-icon.niljs_corner-triangle-bottom {
+  .corner-triangle-field .demo-icon._n91-bottom {
     bottom: -10px;
     left: 0; }
-  .corner-triangle-field .demo-icon.niljs_corner-triangle-left {
+  .corner-triangle-field .demo-icon._n91-left {
     left: -10px;
     top: 0; }

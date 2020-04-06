@@ -5,6 +5,7 @@ const replaceExtension = require('replace-ext')
 const { parse } = require('sass-variable-parser')
 const path = require('path')
 const fs = require('fs')
+const chalk = require('chalk')
 
 // const dirs = require('./dirs')
 
@@ -18,15 +19,23 @@ const getJson = filePath => {
     indented: true,
   }
 
-  // Save prev cwd
+  let variables = {}
+
+  // Save prev cwd firstly
   const prev = process.cwd()
-  // Will chang cwd
-  const variables = parse(
-    fs.readFileSync(filePath).toString('utf-8'),
-    options
-  )
-  // Restore prev cwd
-  process.chdir(prev)
+  try {
+    // Will change cwd
+    variables = parse(
+      fs.readFileSync(filePath).toString('utf-8'),
+      options
+    )
+  } catch (e) {
+    console.log(chalk.red(e.message))
+  } finally {
+    // Restore prev cwd
+    process.chdir(prev)
+
+  }
 
   return JSON.stringify(variables, null, 2)
 }

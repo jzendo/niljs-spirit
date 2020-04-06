@@ -59,8 +59,8 @@
   $beforeSize: resolveWidthAndHeight($dir, $rotateTriangleWidth);
   $selector: '.#{$rotateTriangleSelectorPrefix}-#{$dir}';
 
-  @include importNosize($selector)
-  @include importNobox($selector)
+  // @include importNosize($selector)
+  // @include importNobox($selector)
 
   #{$selector} {
     width: $size;

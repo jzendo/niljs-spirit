@@ -1,10 +1,10 @@
-@import "../common/custom/vars.scss";
+@import "../common/internal/vars.scss";
 
-$triangleWidth: 6px !default;
+$triangleWidth: 8px !default;
 $triangleColor: #fff !default;
 $triangleSelectorPrefix: #{$namespaceScope}_corner-triangle !default;
 $triangleMaskColor: rgba(#f00, 0) !default;
 
-$rotateTriangleWidth: 6px !default;
+$rotateTriangleWidth: 8px !default;
 $rotateTriangleSelectorPrefix: #{$namespaceScope}_corner-rotate-triangle !default;
 $rotateTriangleColor: #fff !default;

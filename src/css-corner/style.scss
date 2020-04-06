@@ -1,6 +1,7 @@
-@import "../common/internal/mixin.scss";
-@import "./vars.scss";
+// @import "../common/internal/mixin.scss";
+// @import "./vars.scss";
 @import "./mixin.scss";
+
 
 // Corner Triangle
 @include makeCornerTriangle(top);

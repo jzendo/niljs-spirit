@@ -1,0 +1,5 @@
+@import '../custom/vars.scss';
+
+// Default global vars
+$namespaceScope: niljs !default;
+$globalPrefix: #{$namespaceScope}_g !default;

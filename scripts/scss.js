@@ -1,6 +1,7 @@
 const { src, dest } = require('gulp')
 const sass = require('gulp-sass')
 const sassGlob = require('gulp-sass-glob')
+const cssnano = require('gulp-cssnano')
 
 const notAllowedDirs = [
   '!src/**/mixin.scss',
@@ -9,11 +10,17 @@ const notAllowedDirs = [
   '!src/common/**/*.scss'
 ]
 
-const streamWithPathsAndDestDir = (paths, destDir) =>
-  src(paths)
+const streamWithPathsAndDestDir = (paths, destDir, pipes = []) => {
+  let result = src(paths)
   .pipe(sassGlob())
   .pipe(sass())
-  .pipe(dest(destDir))
+
+  if (pipes && pipes.length) {
+    result = pipes.reduce((r, fn) => r.pipe(fn), result)
+  }
+
+  return result.pipe(dest(destDir))
+}
 
 const watchScss = (destDir = 'src') => () =>
   streamWithPathsAndDestDir([
@@ -21,12 +28,15 @@ const watchScss = (destDir = 'src') => () =>
     ...notAllowedDirs
   ], destDir)
 
-const buildScss = (destDir = 'src') => () =>
-  streamWithPathsAndDestDir([
+const buildScss = (destDir = 'src') => function buildScss() {
+  return streamWithPathsAndDestDir([
     'src/**/*.scss',
     '!src/**/demo/**',
     ...notAllowedDirs
-  ], destDir)
+  ], destDir, [
+    cssnano()
+  ])
+}
 
 exports.watch = watchScss
 exports.build = buildScss
