@@ -22,33 +22,67 @@ body {
   border: 1px solid #fff;
   width: $containerSize;
   height: $containerSize;
-  line-height: 20px;
   position: relative;
+  line-height: 20px;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+fieldset {
+  .field-body {
+    height: $containerSize * 3 + $boxMargin;
+    overflow: auto;
+    margin: 0;
+  }
+
+  .showcase {
+    float: left;
+    margin: 0 $boxMargin;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .block {
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
 }
 
 .corner-triangle-field {
-  height: $containerSize * 2 + 2 * $boxMargin;
-  overflow: auto;
-}
+  .showcase {
+    width: $triangleWidth * 3;
 
-.corner-triangle-field .#{$triangleSelectorPrefix} {
-  position: absolute;
-}
+    .showcase-icon {
+      margin-left: $triangleWidth;
+    }
+  }
 
-.corner-triangle-field .#{$triangleSelectorPrefix}-top {
-  top: $top;
-  left: $containerSize + $top;
-}
+  .demo-icon {
+    position: absolute;
 
-.corner-triangle-field .#{$triangleSelectorPrefix}-right {
-  right: $right;
-  top: $containerSize + $top;
-}
+    &.#{$triangleSelectorPrefix}-top {
+      top: $top;
+      left: $containerSize + $top;
+    }
 
-.corner-triangle-field .#{$triangleSelectorPrefix}-bottom {
-  bottom: $bottom;
-}
+    &.#{$triangleSelectorPrefix}-right {
+      right: $right;
+      top: $containerSize + $top;
+    }
 
-.corner-triangle-field .#{$triangleSelectorPrefix}-left {
-  left: $left;
+    &.#{$triangleSelectorPrefix}-bottom {
+      bottom: $bottom;
+      left: 0;
+    }
+
+    &.#{$triangleSelectorPrefix}-left {
+      left: $left;
+      top: 0;
+    }
+  }
 }

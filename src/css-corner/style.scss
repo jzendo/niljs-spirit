@@ -1,41 +1,15 @@
 @import "../common/internal/mixin.scss";
 @import "./vars.scss";
+@import "./mixin.scss";
 
-@function getDirs($dir) {
-  @if $dir == top {
-    @return (dir: bottom, other: (left, right, top));
-  }
-
-  @if $dir == bottom {
-    @return (dir: top, other: (left, right, bottom));
-  }
-
-  @if $dir == left {
-    @return (dir: right, other: (left, top, bottom));
-  }
-
-  @if $dir == right {
-    @return (dir: left, other: (right, top, bottom));
-  }
-}
-
-@mixin makeCornerTriangle($dir) {
-  $dirs: getDirs($dir);
-  $targetDir: map-get($dirs, 'dir');
-  $otherDir: map-get($dirs, 'other');
-  $width: ceil($triangleWidth/2);
-
-  $cornerSelector: '.#{$triangleSelectorPrefix}-#{$dir}';
-
-  @include importNosize($cornerSelector)
-  @include importNobox($cornerSelector)
-
-  #{$cornerSelector} {
-    @include borderWith($width, $targetDir, $triangleColor, $otherDir, $triangleMaskColor);
-  }
-}
-
+// Corner Triangle
 @include makeCornerTriangle(top);
 @include makeCornerTriangle(right);
 @include makeCornerTriangle(bottom);
 @include makeCornerTriangle(left);
+
+// Rotate Triangle
+@include makeRotateTriangle(top);
+@include makeRotateTriangle(right);
+@include makeRotateTriangle(bottom);
+@include makeRotateTriangle(left);

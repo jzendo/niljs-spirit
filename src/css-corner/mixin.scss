@@ -1,0 +1,83 @@
+@import "../common/internal/mixin.scss";
+@import "./vars.scss";
+
+@function resolveDirAndOther($dir) {
+  @if $dir == top {
+    @return (dir: bottom, other: (left, right, top));
+  }
+
+  @if $dir == bottom {
+    @return (dir: top, other: (left, right, bottom));
+  }
+
+  @if $dir == left {
+    @return (dir: right, other: (left, top, bottom));
+  }
+
+  @if $dir == right {
+    @return (dir: left, other: (right, top, bottom));
+  }
+}
+
+@function resolveWidthAndHeight($dir, $size) {
+  $half: $size; // floor($size / 2);
+
+  @if $dir == top {
+    @return (width: $size, height: $half);
+  }
+
+  @if $dir == bottom {
+    @return (width: $size, height: $half);
+  }
+
+  @if $dir == left {
+    @return (width: $half, height: $size);
+  }
+
+  @if $dir == right {
+    @return (width: $half, height: $size);
+  }
+}
+
+@mixin makeCornerTriangle($dir) {
+  $dirs: resolveDirAndOther($dir);
+  $targetDir: map-get($dirs, 'dir');
+  $otherDir: map-get($dirs, 'other');
+  $width: ceil($triangleWidth/2);
+  $cornerSelector: '.#{$triangleSelectorPrefix}-#{$dir}';
+
+  @include importNosize($cornerSelector)
+  @include importNobox($cornerSelector)
+
+  #{$cornerSelector} {
+    @include borderWith($width, $targetDir, $triangleColor, $otherDir, $triangleMaskColor);
+  }
+}
+
+@mixin makeRotateTriangle($dir) {
+  $size: ceil($rotateTriangleWidth / 2);
+  $beforeSize: resolveWidthAndHeight($dir, $rotateTriangleWidth);
+  $selector: '.#{$rotateTriangleSelectorPrefix}-#{$dir}';
+
+  @include importNosize($selector)
+  @include importNobox($selector)
+
+  #{$selector} {
+    width: $size;
+    height: $size;
+
+    &::before {
+      background-color: $rotateTriangleColor;
+
+      transform-origin: center;
+      transform: rotate(45deg);
+      width: map-get($beforeSize, 'width');
+      height: map-get($beforeSize, 'height');
+      content: '';
+      display: block;
+      overflow: hidden;
+      visibility: visible;
+      clear: both;
+    }
+  }
+}

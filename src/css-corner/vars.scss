@@ -4,3 +4,7 @@ $triangleWidth: 6px !default;
 $triangleColor: #fff !default;
 $triangleSelectorPrefix: #{$namespaceScope}_corner-triangle !default;
 $triangleMaskColor: rgba(#f00, 0) !default;
+
+$rotateTriangleWidth: 6px !default;
+$rotateTriangleSelectorPrefix: #{$namespaceScope}_corner-rotate-triangle !default;
+$rotateTriangleColor: #fff !default;

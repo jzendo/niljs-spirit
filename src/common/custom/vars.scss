@@ -1,9 +1,15 @@
 // Global vars
 // Selector prefix
-$namespaceScope: 'niljs';
-$globalPrefix: '#{$namespaceScope}_g';
+$namespaceScope: niljs;
+$globalPrefix: #{$namespaceScope}_g;
 
 // Module: src\css-corner
+// triangle
 $triangleWidth: 10px;
 $triangleColor: #fff;
-$triangleSelectorPrefix: '#{$namespaceScope}_corner-triangle';
+$triangleSelectorPrefix: #{$namespaceScope}_corner-triangle;
+
+// rotate triangle
+$rotateTriangleWidth: 10px;
+$rotateTriangleSelectorPrefix: #{$namespaceScope}_corner-rotate-triangle;
+$rotateTriangleColor: #fff;
